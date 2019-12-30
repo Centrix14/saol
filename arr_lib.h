@@ -25,6 +25,7 @@ void orf(char *arg);
 void iter(char *arg);
 void predf(char *arg);
 void unpred(char *arg);
+void swap(char *arg);
 
 int is_empty(char *word);
 int is_kw(char *word);

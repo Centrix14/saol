@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 #include "arr_lib.h"
-#include "../unitok/unitok.h"
+#include "unitok/unitok.h"
 
 #define MAX 2048
 
@@ -12,11 +12,10 @@ int pos = 0;
 
 int arg_type = 0; // 0 - integer, 1 - character
 int start = 0, end = MAX;
-int len = 24;
+int len = 25;
 int pred = 1;
 
 void ini(char *arg) {
-	puts("ini call");
 	if (isint(arg))
 		arr[pos] = atoi(arg);
 	else
@@ -156,22 +155,37 @@ void unpred(char *arg) {
 
 void iter(char *arg) {
 	char *tok = NULL;
-	int code = 0;
+	int code = -1, indx = 0;
 
 	if (!strcmp(arg, "|~")) return ;
 
 	for (int i = start; i < end; i++) {
 		pos = i;
 
-		tok = get_token(arg, 1);
+		indx = 0;
+		tok = get_token(arg, &indx);
 		while (tok != NULL) {
 			if (is_kw(arg) >= 0)
 				code = is_kw(arg);
 			if (!is_empty(arg))
 				exec(code, arg);
 
-			tok = get_token(arg, 0);
+			tok = get_token(arg, &indx);
 		}
+	}
+}
+
+void swap(char *arg) {
+	int indx = 0;
+
+	if (!strcmp(arg, "<->")) return ;
+
+	if (isint(arg)) {
+		indx = atoi(arg);
+
+		arr[pos] ^= arr[indx];
+		arr[indx] ^= arr[pos];
+		arr[pos] ^= arr[indx];
 	}
 }
 
@@ -189,7 +203,7 @@ int is_empty(char *word) {
 }
 
 int is_kw(char *word) {
-	char *kws[] = {":", "^", "<", ">", "_!", "~", "|", "-!", ";", "@", "+", "\'", "*", "/", "#", "[", "]", ":-", "!-", "&", "\\", "?~", "?!", "|~"};
+	char *kws[] = {":", "^", "<", ">", "_!", "~", "|", "-!", ";", "@", "+", "\'", "*", "/", "#", "[", "]", ":-", "!-", "&", "\\", "?~", "?!", "|~", "<->"};
 
 	for (int i = 0; i < len; i++) {
 		if (!strcmp(kws[i], word)) return i;
@@ -198,7 +212,7 @@ int is_kw(char *word) {
 }
 
 void exec(int arr_index, char *arg) {
-	void (*arr[])(char *) = {ini, addr, shl, shr, show_elm, comment, filler, show_arr, int_mode, char_mode, sum, subt, mult, idiv, cla, pstart, pend, assig, notassig, andf, orf, predf, unpred, iter};
+	void (*arr[])(char *) = {ini, addr, shl, shr, show_elm, comment, filler, show_arr, int_mode, char_mode, sum, subt, mult, idiv, cla, pstart, pend, assig, notassig, andf, orf, predf, unpred, iter, swap};
 
-	if (arr_index < len && need_exec(arr_index)) (*arr[arr_index])(arg);
+	if (arr_index >= 0 && arr_index < len && need_exec(arr_index)) (*arr[arr_index])(arg);
 }
