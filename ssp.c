@@ -4,11 +4,12 @@
 
 /*
  * ssp - standard saol preprocessor
- * v1.0
+ * v1.2
  * 31/12/2019
  * by Centrix
  */
 
+char *ssp_tok(char *str, int *pos);
 int is_kw(char* word);
 void exec(int op_code, char* arg);
 void macro(char *arg), link(char *arg), prog(char *arg), copy(char *arg);
@@ -19,6 +20,7 @@ FILE *src, *dst;
 
 int main(int argc, char *argv[]) {
 	char line[1024], *tok = "";
+	int pos = 0;
 
 	if (argc < 2) {
 		fprintf(stderr, "Usage: in_file out_file\n");
@@ -28,7 +30,8 @@ int main(int argc, char *argv[]) {
 	dst = fopen(argv[2], "w");
 
 	while (fgets(line, 1024, src) != NULL) {
-		tok = strtok(line, " \n");
+		pos = 0;
+		tok = ssp_tok(line, &pos);
 
 		while (tok != NULL) {
 			if (is_kw(tok) >= 0)
@@ -36,13 +39,43 @@ int main(int argc, char *argv[]) {
 			if (!isempty(tok))	
 				exec(code, tok);
 
-			tok = strtok(NULL, " \n");
+			tok = ssp_tok(line, &pos);
 		}
 	}
 
 	fclose(src);
 	fclose(dst);
 	return 0;
+}
+
+char *ssp_tok(char *str, int *pos) {
+	static char tok[256];
+	char *tptr = tok, *sptr = &str[*pos];
+	int sticking = 0;
+
+	if (!(*sptr))
+		return NULL;
+
+	while (*sptr) {
+		if (strchr("{}", *sptr) != NULL) {
+			sticking = !sticking;
+			sptr++;
+
+			if (*(sptr-1) == '}') break;
+			continue;
+		}
+
+		if (sticking || (strchr(" \n", *sptr) == NULL)) {
+			*tptr = *sptr;
+			tptr++; sptr++;
+		}
+		else
+			break;
+	}
+	*tptr = '\0';
+	*pos = (sptr - str) + 1;
+
+	return tok;
 }
 
 int is_kw(char *word) {
@@ -72,7 +105,7 @@ void macro(char *arg) {
 	}
 	else {
 		sprintf(macro_codes[pos++], "%s", arg);
-		state = 1;
+		state = 0;
 	}
 }
 
@@ -110,7 +143,7 @@ int is_macro(char *word) {
 
 void copy(char *arg) {
 	if (is_macro(arg) >= 0)
-		fprintf(dst, "%s", macro_codes[is_macro(arg)]);
+		fprintf(dst, "%s ", macro_codes[is_macro(arg)]);
 	else
 		fprintf(dst, "%s ", arg);
 }
