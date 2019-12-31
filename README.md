@@ -51,6 +51,10 @@
   ~ your programm
   ```
 
+### Important notes
+  + Macro names in the program must be surrounded by spaces
+  + If the macro value contains spaces, use `{} `to combine expressions. Thanks to this, you can write a macro that will generate another macro.
+
 ## Installation and use
 ### Installation
 to install, you will need:
