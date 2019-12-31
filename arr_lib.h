@@ -1,3 +1,4 @@
+/* Header file for arr_lib.c */
 #ifndef __SAOL_ARRAY_LIB_H_INCLUDED__
 #define __SAOL_ARRAY_LIB_H_INCLUDED__
 

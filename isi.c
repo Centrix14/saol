@@ -1,3 +1,10 @@
+/*
+ * Saol interactive interpreter file
+ * v1.0
+ * 31/12/2019
+ * by Centrix
+ */
+
 #include <stdio.h>
 #include <string.h>
 #include "unitok/unitok.h"

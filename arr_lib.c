@@ -1,3 +1,5 @@
+/* Saol interpreter library v1.0 31/12/2019 by Centrix */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
