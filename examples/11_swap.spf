@@ -1,0 +1,4 @@
+~ (if you need to swap the values of 2 elements, use the command `<->`)
+~ (for example)
+
+:678 >> : 123 (<->) 0 (_!) << (_!) ~ (write 678 in the 0-th element, 123 in the 2-th and change their places)

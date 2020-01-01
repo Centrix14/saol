@@ -1,0 +1,6 @@
+~ (this is a comment)
+~ (programm 'hello_world')
+
+@|(Hello, World!)(-!) ~ (the `@` character indicates that the data being operated on is a character)
+~ (the `|` character sequentially fills the array with characters in parentheses)
+~ (command `-!` displays the contents of the array on the screen)

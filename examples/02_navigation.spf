@@ -1,0 +1,6 @@
+~ (saol is focused on array processing, so it has tools for navigating arrays)
+
+:123 ~ (initially, the array element pointer is set to 0 element, so this string initializes the 0 cell with the value 123)
+>:456 ~ (command `>` moves the pointer 1 forward)
+< ~ (similarly, the command ` > ' moves the pointer back 1)
+^45 ~ (the ` ^ ' command sets the pointer to a specific position, here in cell 45)

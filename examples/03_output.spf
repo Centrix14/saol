@@ -1,0 +1,7 @@
+~ (here we will look at displaying values on the screen)
+~ (only values from the array are displayed)
+~ (for example let's display the following text: "The answer is: 42")
+
+|(The answer is: 42) ~ (first, enter the text in the array using `|`)
+@ ~ (now we will specify that it is necessary to output the text, but not the number)
+(-!) ~ (actually output the values from the array)

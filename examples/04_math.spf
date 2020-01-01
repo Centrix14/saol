@@ -1,0 +1,6 @@
+~ (let's study the application of mathematics in saol, for this we calculate the value of the expression (2+5*6-4)/7)
+~ (in saol, all mathematical operations have equal execution priority, so we will calculate (5*6+2-4)/7)
+
+;:5^2047:6[0]1* ~ (in the zero element we write 5, and in the 2047 element we write 6, because all the numbers are added / subtracted / multiplied and divided by the value of the 2047 element)
+^0:2+:4' ~ (write 2 in the zero cell produce addition, write 4 in the zero cell, subtract)
+:7/^2047(_!) ~ (the result is divided by 7 and printed on the screen)

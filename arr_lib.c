@@ -1,4 +1,4 @@
-/* Saol interpreter library v1.0 31/12/2019 by Centrix */
+/* Saol interpreter library v1.2 31/12/2019 by Centrix */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -97,10 +97,8 @@ void mult(char *arg) {
 
 void idiv(char *arg) {
 	for (int i = start; i < end; i++) {
-		if (arr[i]) {
+		if (arr[i])
 			arr[MAX-1] /= arr[i];
-			puts("div");
-		}
 	}
 }
 

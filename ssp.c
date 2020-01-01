@@ -45,6 +45,7 @@ int main(int argc, char *argv[]) {
 
 	fclose(src);
 	fclose(dst);
+
 	return 0;
 }
 

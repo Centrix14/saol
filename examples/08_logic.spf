@@ -1,0 +1,6 @@
+~ (in saol, logical operations are also available, namely, & - AND, \ - OR)
+~ (for example)
+
+|1 0 [0]2 & ^2047 (_!) ~ (calculating the conjunction 1 and 0)
+^3:10@(_!);^2047 ~ (jump to a new line)
+\ (_!) ~ (calculating disjunction 1 and 0)

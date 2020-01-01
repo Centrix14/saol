@@ -1,0 +1,8 @@
+~ (branches based on predicative execution are available in saol)
+~ (it works like this: if the result of the previous operation (that is, the condition) is not zero, then the subsequent operations are executed, but they will not be executed if the result is 0)
+~ (for example)
+
+:6 ^2047 :12 [0]1 ' ~ (condition 12 - 6)
+(?~) ^0 [0]2048 |(true) @ (-!) ~ (after the command `?~` is the code that must be executed if the condition is true)
+(?!) ^0 [0]2048 |(false) @ (-!) ~ (after the command `?!'this is the code that must be executed if the condition is false)
+ ~ (in this case, the condition is true and `true` is output, but if you replace 6 with 12, the condition becomes false and `false`is output)

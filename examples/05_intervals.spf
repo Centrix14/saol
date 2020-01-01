@@ -1,0 +1,5 @@
+~ (in past lessons, you may have noticed constructions like `[0]2`, so let's talk about them)
+~ (initially, the commands are applied to all 2048 elements of the array, but to limit the range of action, a construction of the form is used: [<from>]<to>)
+~ (for example)
+
+@|abcdefg [0]3 (-!) ~ (displays characters from 0 to 3)

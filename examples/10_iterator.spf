@@ -1,0 +1,6 @@
+~ (the iterator allows you to run the same code for each element of an array or span)
+~ (the iterator command looks like this: ( | ~ ) after it, in brackets is the code that will have to be executed for each element sequentially, but most importantly at the end, before closing the bracket, put a space!)
+~ (for example)
+
+@|(i am text!) ~ (write the string `i am text`to the array)
+(|~)(_! ) ~ (iteratively display the characters on the screen, by the way this is the implementation of the command `-!`)

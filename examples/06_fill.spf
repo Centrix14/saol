@@ -1,0 +1,5 @@
+~ (sometimes you need to fill an array, or part of it, with the same characters / numbers, using the `#`command)
+~ (for example)
+
+[0]3 @ #Q (-!) ~ (filling elements from 0 to 3 with `Q ' characters, output to the screen)
+; #6 (-!) ~ (filling the same gap with numbers 6)

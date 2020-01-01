@@ -1,0 +1,6 @@
+~ (if you want to copy a value from one cell to another, use the commands `:-` & `!-`)
+~ (for example)
+
+:789 (:-) 1 > (_!) ~ (copy the value 789 from the 0th element to the 1st element)
+^3:10@(_!)^1; ~ (jump to a new line)
+< (!-) 2 >> (_!) ~ (copying the inverted value 789 from element 0 to element 2)
