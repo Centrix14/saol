@@ -8,6 +8,8 @@
   + `saol` -- standard interpreter
   + `isi` -- interactive interpreter
   + `ssp` -- simple standard preprocessor
+  + `examples/` -- examples of saol programs
+  + `examples/ssp/` -- examples of using the ssp preprocessor
 
 ## Overview
   + `(` / `)` -- take everything in parentheses as a whole works like quotation marks in other languages (`(word1 word2)` - will be read as "word1 word2")
