@@ -11,7 +11,7 @@
 
 ## Overview
   + `(` / `)` -- take everything in parentheses as a whole works like quotation marks in other languages (`(word1 word2)` - will be read as "word1 word2")
-  + `:` -- initialize the current selected element with a value (`:12` - now element 0 stores the value 12)
+  + `:` -- initialize the current selected element with a value (`:12` - now element 0 stores the value 12). If `il` is specified as an argument, the element will be initialized with the length of the interval (see the description of the `[` & `]` commands).
   + `^` -- go to the item with the number (`^123` - now 123 is the current work item)
   + `>` / `<` -- move right / left in the array (`>>` - move the current work item pointer 2 items forward)
   + `_!` -- display the value of the current item (`:123(_!)` - displays the value of element 123 on the screen)

@@ -1,0 +1,1 @@
+.macro print {|(Hello from link_me.spf!)@(-!)}
