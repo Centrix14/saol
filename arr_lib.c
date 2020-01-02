@@ -1,4 +1,4 @@
-/* Saol interpreter library v1.2 31/12/2019 by Centrix */
+/* Saol interpreter library v1.3 02/01/2020 by Centrix */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,7 +18,11 @@ int len = 25;
 int pred = 1;
 
 void ini(char *arg) {
-	if (isint(arg))
+	if (!strcmp(arg, "il")) {
+		arr[pos] = end - start - 1;
+		return ;
+	}
+	else if (isint(arg))
 		arr[pos] = atoi(arg);
 	else
 		arr[pos] = arg[0];

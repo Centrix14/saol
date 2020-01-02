@@ -4,8 +4,8 @@
 
 /*
  * ssp - standard saol preprocessor
- * v1.2
- * 31/12/2019
+ * v1.3
+ * 02/01/2020
  * by Centrix
  */
 
@@ -17,6 +17,7 @@ void macro(char *arg), link(char *arg), prog(char *arg), copy(char *arg);
 char macro_names[1024][256], macro_codes[1024][256];
 int len = 3, code = 3, pos = 0;
 FILE *src, *dst;
+int is_end = 0;
 
 int main(int argc, char *argv[]) {
 	char line[1024], *tok = "";
@@ -30,6 +31,7 @@ int main(int argc, char *argv[]) {
 	dst = fopen(argv[2], "w");
 
 	while (fgets(line, 1024, src) != NULL) {
+		code = 3;
 		pos = 0;
 		tok = ssp_tok(line, &pos);
 
@@ -46,7 +48,7 @@ int main(int argc, char *argv[]) {
 	fclose(src);
 	fclose(dst);
 
-	return 0;
+	return is_end;
 }
 
 char *ssp_tok(char *str, int *pos) {
@@ -108,6 +110,7 @@ void macro(char *arg) {
 		sprintf(macro_codes[pos++], "%s", arg);
 		state = 0;
 	}
+	is_end++;
 }
 
 void link(char *arg) {
@@ -130,6 +133,7 @@ void link(char *arg) {
 	putc('\n', dst);
 
 	fclose(from);
+	is_end++;
 }
 
 void prog(char *arg) {

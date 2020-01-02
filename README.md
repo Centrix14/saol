@@ -40,7 +40,7 @@
   + specifically for saol, I wrote a preprocessor called ssp (standard SAOL preprocessor), it runs separately from the main interpreter, and has the following features:
     + `.link <file_1> <file_2> ... <file_n>` -- connecting third-party files
 	+ `.macro <name> <expr>` -- creates a macro named name, the next time it is encountered, expr will be substituted for it
-	+ `.prog` -- end of the preprocessor command block and start of the program
+	+ `.prog` -- end of the preprocessor command block and start of the program (in version 1.3 and higher it is not necessary)
 
 ### Template for using a preprocessor in a program
   ```
