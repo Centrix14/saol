@@ -1,7 +1,7 @@
 /*
  * SAOL interpreter file
  * v1.0
- * 31/12/2019
+ * 31.12.2019
  * by Centrix
  */
 

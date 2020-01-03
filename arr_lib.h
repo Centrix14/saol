@@ -1,4 +1,5 @@
 /* Header file for arr_lib.c */
+
 #ifndef __SAOL_ARRAY_LIB_H_INCLUDED__
 #define __SAOL_ARRAY_LIB_H_INCLUDED__
 
@@ -27,6 +28,7 @@ void iter(char *arg);
 void predf(char *arg);
 void unpred(char *arg);
 void swap(char *arg);
+void inc(char *arg);
 
 int is_empty(char *word);
 int is_kw(char *word);

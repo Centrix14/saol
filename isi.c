@@ -1,7 +1,7 @@
 /*
  * Saol interactive interpreter file
  * v1.0
- * 31/12/2019
+ * 31.12.2019
  * by Centrix
  */
 
@@ -15,7 +15,7 @@ int main(void) {
 	char *tok;
 	int code = -1, pos = 0;
 
-	printf("-- Interactive SAOL Interpreter v1.0\n\n");
+	printf("-- Interactive SAOL Interpreter v1.4\n\n");
 
 	while (strcmp(line, "q")) {
 		printf("\n> ");

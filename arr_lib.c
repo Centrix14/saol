@@ -1,4 +1,9 @@
-/* Saol interpreter library v1.3 02/01/2020 by Centrix */
+/* 
+ * Saol interpreter library
+ * v1.4
+ * 02.01.2020
+ * by Centrix
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,9 +18,7 @@ int arr[MAX];
 int pos = 0;
 
 int arg_type = 0; // 0 - integer, 1 - character
-int start = 0, end = MAX;
-int len = 25;
-int pred = 1;
+int start = 0, end = MAX, len = 32, pred = 1, stop = 0;
 
 void ini(char *arg) {
 	if (!strcmp(arg, "il")) {
@@ -168,7 +171,7 @@ void iter(char *arg) {
 
 		indx = 0;
 		tok = get_token(arg, &indx);
-		while (tok != NULL) {
+		while (tok != NULL && !stop) {
 			if (is_kw(arg) >= 0)
 				code = is_kw(arg);
 			if (!is_empty(arg))
@@ -177,6 +180,7 @@ void iter(char *arg) {
 			tok = get_token(arg, &indx);
 		}
 	}
+	stop = 0;
 }
 
 void swap(char *arg) {
@@ -190,6 +194,67 @@ void swap(char *arg) {
 		arr[pos] ^= arr[indx];
 		arr[indx] ^= arr[pos];
 		arr[pos] ^= arr[indx];
+	}
+}
+
+void inc(char *arg) {
+	int c = getc(stdin);
+
+	if (c == '\n') stop = 1;
+	arr[pos] = c;
+}
+
+void is_bigger(char *arg) {
+	if (!strcmp(arg, ">?")) return ;
+
+	if (isint(arg)) {
+		if (arr[pos] > atoi(arg)) pred = 1;
+		else pred = 0;
+	}
+}
+
+void is_smaller(char *arg) {
+	if (!strcmp(arg, "<?")) return ;
+
+	if (isint(arg)) {
+		if (arr[pos] < atoi(arg)) pred = 1;
+		else pred = 0;
+	}
+}
+
+void is_bigger_or_eq(char *arg) {
+	if (!strcmp(arg, ">=?")) return ;
+
+	if (isint(arg)) {
+		if (arr[pos] >= atoi(arg)) pred = 1;
+		else pred = 0;
+	}
+}
+
+void is_smaller_or_eq(char *arg) {
+	if (!strcmp(arg, "<=?")) return ;
+
+	if (isint(arg)) {
+		if (arr[pos] <= atoi(arg)) pred = 1;
+		else pred = 0;
+	}
+}
+
+void is_eq(char *arg) {
+	if (!strcmp(arg, "=?")) return ;
+
+	if (isint(arg)) {
+		if (arr[pos] == atoi(arg)) pred = 1;
+		else pred = 0;
+	}
+}
+
+void is_not_eq(char *arg) {
+	if (!strcmp(arg, "!=?")) return ;
+
+	if (isint(arg)) {
+		if (arr[pos] != atoi(arg)) pred = 1;
+		else pred = 0;
 	}
 }
 
@@ -207,7 +272,7 @@ int is_empty(char *word) {
 }
 
 int is_kw(char *word) {
-	char *kws[] = {":", "^", "<", ">", "_!", "~", "|", "-!", ";", "@", "+", "\'", "*", "/", "#", "[", "]", ":-", "!-", "&", "\\", "?~", "?!", "|~", "<->"};
+	char *kws[] = {":", "^", "<", ">", "_!", "~", "|", "-!", ";", "@", "+", "\'", "*", "/", "#", "[", "]", ":-", "!-", "&", "\\", "?~", "?!", "|~", "<->", "\"", ">?", "<?", ">=?", "<=?", "=?", "!=?"};
 
 	for (int i = 0; i < len; i++) {
 		if (!strcmp(kws[i], word)) return i;
@@ -216,7 +281,7 @@ int is_kw(char *word) {
 }
 
 void exec(int arr_index, char *arg) {
-	void (*arr[])(char *) = {ini, addr, shl, shr, show_elm, comment, filler, show_arr, int_mode, char_mode, sum, subt, mult, idiv, cla, pstart, pend, assig, notassig, andf, orf, predf, unpred, iter, swap};
+	void (*arr[])(char *) = {ini, addr, shl, shr, show_elm, comment, filler, show_arr, int_mode, char_mode, sum, subt, mult, idiv, cla, pstart, pend, assig, notassig, andf, orf, predf, unpred, iter, swap, inc, is_bigger, is_smaller, is_bigger_or_eq, is_smaller_or_eq, is_eq, is_not_eq};
 
 	if (arr_index >= 0 && arr_index < len && need_exec(arr_index)) (*arr[arr_index])(arg);
 }
