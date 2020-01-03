@@ -109,6 +109,7 @@ void macro(char *arg) {
 	else {
 		sprintf(macro_codes[pos++], "%s", arg);
 		state = 0;
+		code = 3;
 	}
 	is_end++;
 }
