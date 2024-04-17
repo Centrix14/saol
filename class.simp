@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="13.96" multi-file="no" uid="simpea91a04a222a471187578eb8add80136">
+  <meta>
+    <name>class</name>
+    <authors>Артём Звягин</authors>
+    <description />
+  </meta>
+  <counters models="1">
+    <entity-names>
+      <counter>
+        <item-type type-id="class" type="Class" />
+        <value>8</value>
+      </counter>
+      <counter>
+        <item-type type-id="element-detail" type="Element Detail" />
+        <value>1</value>
+      </counter>
+    </entity-names>
+    <entity-ids>
+      <counter>
+        <item-type type-id="class" type="Class" />
+        <value>9</value>
+      </counter>
+      <counter>
+        <item-type type-id="relationship" type="Association" />
+        <value>12</value>
+      </counter>
+      <counter>
+        <item-type type-id="property" type="Property" />
+        <value>23</value>
+      </counter>
+      <counter>
+        <item-type type-id="element-detail" type="Element Detail" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type type-id="comment-connector" type="Comment Connector" />
+        <value>2</value>
+      </counter>
+    </entity-ids>
+    <diagrams>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.Diagrams.UmlDiagrams.UmlClassDiagram</type>
+        <value>1</value>
+      </counter>
+    </diagrams>
+    <fields />
+  </counters>
+  <alias-groups />
+  <management uid="md-c5ccc7b150194b4db30fb8ba8855c7f2" name="" task-id-sequence="0">
+    <persons>
+      <person id="">
+        <first-name>Артём</first-name>
+        <last-name>Звягин</last-name>
+        <role />
+        <e-mail>zvyagin.a.s@edu.narfu.ru</e-mail>
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+      </person>
+    </persons>
+    <teams />
+    <sprints />
+    <projects />
+    <modules />
+    <tasks />
+    <to-dos />
+  </management>
+  <glossary id="glsr-cd4ce7c17f234220978ad387249d752f" />
+  <types default="UML">
+    <type-sets>
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types>
+      <parameters />
+      <types>
+        <type id="Class:b843812f53ee4de28bb1418492bdff68" name="Визуальный материал" class-ref="b843812f53ee4de28bb1418492bdff68" />
+        <type id="Class:53aaecf5e8234b76a90516cc736662c0" name="Авторство" class-ref="53aaecf5e8234b76a90516cc736662c0" />
+        <type id="Class:2898daa942fb4bab9e50751075edceb3" name="Состояние статьи" class-ref="2898daa942fb4bab9e50751075edceb3" />
+        <type id="Class:215a126dced0495eaded61b1051da399" name="Тип статьи" class-ref="215a126dced0495eaded61b1051da399" />
+        <type id="Class:2e8f500181a0475faf24b27db870913e" name="Сотрудник" class-ref="2e8f500181a0475faf24b27db870913e" />
+        <type id="Class:8cb0218e9fe544df9bf91510decc66ea" name="Статья" class-ref="8cb0218e9fe544df9bf91510decc66ea" />
+        <type id="Class:40e3873eff5a48b5a085d482d4ad2dbd" name="Срок подготовки статьи" class-ref="40e3873eff5a48b5a085d482d4ad2dbd" />
+        <type id="Class:b3eca55ba4834bd9a454a4a5bbe7a6b3" name="Персона" class-ref="b3eca55ba4834bd9a454a4a5bbe7a6b3" />
+      </types>
+    </custom-types>
+  </types>
+  <items>
+    <item id="01de2363870647788d80c24bb149376b" cid="PROP022" type="property" owner="47b107b471604d17b04774eeeaad7d5b" creator="" creation-date="04/17/2024 10:16:57" visibility="private">
+      <structural-feature multiplicity="1" type="Персона" type-id="Class:b3eca55ba4834bd9a454a4a5bbe7a6b3" />
+    </item>
+    <item id="3200585036334a26aefffe26459631f5" cid="PROP021" type="property" owner="47b107b471604d17b04774eeeaad7d5b" creator="" creation-date="04/17/2024 10:16:57" visibility="private">
+      <structural-feature multiplicity="1..*" type="Сотрудник" type-id="Class:2e8f500181a0475faf24b27db870913e" />
+      <property aggregation="shared" />
+    </item>
+    <item id="9d87216af065415e95486865f0b2d4eb" cid="PROP004" type="property" owner="8d097494e93643a5ba1068079ee913bf" creator="" creation-date="04/17/2024 10:04:53" visibility="private">
+      <structural-feature multiplicity="1" type="Тип статьи" type-id="Class:215a126dced0495eaded61b1051da399" />
+    </item>
+    <item id="8424d46586804737a9e00670d2b8caa8" cid="PROP010" type="property" owner="128f9aaa99534835a6a83a88d7fdfa51" creator="" creation-date="04/17/2024 10:07:42" visibility="private">
+      <structural-feature multiplicity="1" type="Срок подготовки статьи" type-id="Class:40e3873eff5a48b5a085d482d4ad2dbd" />
+    </item>
+    <item id="b8403ad297cc4e21872c382931e5f168" cid="PROP019" type="property" owner="727b8f10fb3f416b8d2be6b78cf62dfc" creator="" creation-date="04/17/2024 10:12:40" visibility="private">
+      <structural-feature multiplicity="1..*" type="Авторство" type-id="Class:53aaecf5e8234b76a90516cc736662c0" />
+      <property aggregation="shared" />
+    </item>
+    <item id="2b51d9494c114a2589a2893e04df7eb6" cid="PROP013" type="property" owner="9f60d4d1145d4e7ca48671a16b2d46ce" creator="" creation-date="04/17/2024 10:12:11" visibility="private">
+      <structural-feature multiplicity="1..*" type="Авторство" type-id="Class:53aaecf5e8234b76a90516cc736662c0" />
+      <property aggregation="shared" />
+    </item>
+    <item id="988e77d757d747c28a008548401abb39" cid="PROP007" type="property" owner="84ad2d36b50847c085751f796d52c56a" creator="" creation-date="04/17/2024 10:06:29" visibility="private">
+      <structural-feature multiplicity="1..*" type="Состояние статьи" type-id="Class:2898daa942fb4bab9e50751075edceb3" />
+      <property aggregation="shared" />
+    </item>
+    <item id="3cde4e5b3f9d49219ee39c5da44aae34" cid="PROP003" type="property" owner="8d097494e93643a5ba1068079ee913bf" creator="" creation-date="04/17/2024 10:04:53" visibility="private">
+      <structural-feature multiplicity="1..*" type="Статья" type-id="Class:8cb0218e9fe544df9bf91510decc66ea" />
+      <property aggregation="shared" />
+    </item>
+    <item id="0b9d800f942649f1a36497f6dfe6fb2b" cid="PROP020" type="property" owner="727b8f10fb3f416b8d2be6b78cf62dfc" creator="" creation-date="04/17/2024 10:12:40" visibility="private">
+      <structural-feature multiplicity="1" type="Персона" type-id="Class:b3eca55ba4834bd9a454a4a5bbe7a6b3" />
+    </item>
+    <item id="c1e318fab55445929f7fc9f7c870aea9" cid="PROP009" type="property" owner="128f9aaa99534835a6a83a88d7fdfa51" creator="" creation-date="04/17/2024 10:07:42" visibility="private">
+      <structural-feature multiplicity="1..*" type="Статья" type-id="Class:8cb0218e9fe544df9bf91510decc66ea" />
+      <property aggregation="shared" />
+    </item>
+    <item id="40f33b7b75f94123ba2a53dbaba13710" cid="PROP006" type="property" owner="f19c0c8772a847b7aaab1ff64a73d140" creator="" creation-date="04/17/2024 10:05:23" visibility="private">
+      <structural-feature multiplicity="1" type="Статья" type-id="Class:8cb0218e9fe544df9bf91510decc66ea" />
+    </item>
+    <item id="0a0e42cf01644db7ab88c1fc905a1606" cid="PROP005" type="property" owner="f19c0c8772a847b7aaab1ff64a73d140" creator="" creation-date="04/17/2024 10:05:23" visibility="private">
+      <structural-feature multiplicity="1..*" type="Визуальный материал" type-id="Class:b843812f53ee4de28bb1418492bdff68" />
+      <property aggregation="shared" />
+    </item>
+    <item id="1105c0a4fc394cba9b6d819a8b7d26d6" cid="PROP008" type="property" owner="84ad2d36b50847c085751f796d52c56a" creator="" creation-date="04/17/2024 10:06:29" visibility="private">
+      <structural-feature multiplicity="1" type="Статья" type-id="Class:8cb0218e9fe544df9bf91510decc66ea" />
+    </item>
+    <item id="1863bcabac6646fc9b1246132bdb0444" cid="PROP014" type="property" owner="9f60d4d1145d4e7ca48671a16b2d46ce" creator="" creation-date="04/17/2024 10:12:11" visibility="private">
+      <structural-feature multiplicity="1" type="Статья" type-id="Class:8cb0218e9fe544df9bf91510decc66ea" />
+    </item>
+  </items>
+  <models>
+    <model id="pa81cabbb7f3b4474ae58b277586b272e_619846572" name="Model1" namespace="" order-index="1">
+      <meta>
+        <authors>
+          <author> </author>
+        </authors>
+        <description />
+        <creation-date>04/17/2024 10:00:13</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <abstract-items />
+      <sub-models />
+      <diagram type="uml-class" id="p9eb91e251f3e49ff88fb404ad5ad2ec1_528651439" name="ClassDiagram1" order-index="1" uid="" auto-routed-paths="false" default-line-style="default">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="solid" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>04/17/2024 10:00:13</creation-date>
+          <change-date>04/17/2024 10:17:48</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items>
+          <item id="9f60d4d1145d4e7ca48671a16b2d46ce" cid="REL007" type="relationship" name="имеет" creator="" creation-date="04/17/2024 10:12:11" from="53aaecf5e8234b76a90516cc736662c0" to="8cb0218e9fe544df9bf91510decc66ea" visibility="package">
+            <owned-items />
+            <relation from="53aaecf5e8234b76a90516cc736662c0" to="8cb0218e9fe544df9bf91510decc66ea" derived="false">
+              <start-role id="umlar-b7be9548-b0a8-4cae-9ae2-f089c224c4cd" name="" navigability="" association-type="aggregation" visibility="private" property-ref="2b51d9494c114a2589a2893e04df7eb6" />
+              <end-role id="umlar-cda21df9-05ec-47f7-8b82-9cb88cf2fe63" name="" navigability="" association-type="association" visibility="private" property-ref="1863bcabac6646fc9b1246132bdb0444" />
+            </relation>
+          </item>
+          <item id="8cb0218e9fe544df9bf91510decc66ea" cid="C001" type="class" name="Статья" creator="" creation-date="04/17/2024 10:01:36" visibility="undefined">
+            <stereotypes>
+              <stereotype name="entity" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="8cb0218e9fe544df9bf91510decc66ea_entity_c" type="entity" ref="" />
+            </stereotype-instances>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="8d097494e93643a5ba1068079ee913bf" cid="REL002" type="relationship" name="характеризует" creator="" creation-date="04/17/2024 10:04:53" from="8cb0218e9fe544df9bf91510decc66ea" to="215a126dced0495eaded61b1051da399" visibility="package">
+            <owned-items />
+            <relation from="8cb0218e9fe544df9bf91510decc66ea" to="215a126dced0495eaded61b1051da399" derived="false">
+              <start-role id="umlar-aa89bd28-55e7-4c38-b896-fe856f865fbd" name="" navigability="" association-type="aggregation" visibility="private" property-ref="3cde4e5b3f9d49219ee39c5da44aae34" />
+              <end-role id="umlar-39c71628-e9e3-4732-a59d-54cdd7c153ae" name="" navigability="" association-type="association" visibility="private" property-ref="9d87216af065415e95486865f0b2d4eb" />
+            </relation>
+          </item>
+          <item id="40e3873eff5a48b5a085d482d4ad2dbd" cid="C005" type="class" name="Срок подготовки статьи" creator="" creation-date="04/17/2024 10:03:09" visibility="undefined">
+            <stereotypes>
+              <stereotype name="entity" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="40e3873eff5a48b5a085d482d4ad2dbd_entity_c" type="entity" ref="" />
+            </stereotype-instances>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="b3eca55ba4834bd9a454a4a5bbe7a6b3" cid="C006" type="class" name="Персона" creator="" creation-date="04/17/2024 10:10:19" visibility="undefined">
+            <stereotypes>
+              <stereotype name="entity" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="b3eca55ba4834bd9a454a4a5bbe7a6b3_entity_c" type="entity" ref="" />
+            </stereotype-instances>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="128f9aaa99534835a6a83a88d7fdfa51" cid="REL005" type="relationship" name="характеризует" creator="" creation-date="04/17/2024 10:07:42" from="8cb0218e9fe544df9bf91510decc66ea" to="40e3873eff5a48b5a085d482d4ad2dbd" visibility="package">
+            <owned-items />
+            <relation from="8cb0218e9fe544df9bf91510decc66ea" to="40e3873eff5a48b5a085d482d4ad2dbd" derived="false">
+              <start-role id="umlar-a284996b-0bfb-4e9b-b5b0-5e87e515a1c0" name="" navigability="" association-type="aggregation" visibility="private" property-ref="c1e318fab55445929f7fc9f7c870aea9" />
+              <end-role id="umlar-d223d62f-fa62-4997-9b92-27a28dac29c3" name="" navigability="" association-type="association" visibility="private" property-ref="8424d46586804737a9e00670d2b8caa8" />
+            </relation>
+          </item>
+          <item id="2898daa942fb4bab9e50751075edceb3" cid="C004" type="class" name="Состояние статьи" creator="" creation-date="04/17/2024 10:02:55" visibility="undefined">
+            <stereotypes>
+              <stereotype name="entity" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="2898daa942fb4bab9e50751075edceb3_entity_c" type="entity" ref="" />
+            </stereotype-instances>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="f19c0c8772a847b7aaab1ff64a73d140" cid="REL003" type="relationship" name="принадлежит" creator="" creation-date="04/17/2024 10:05:23" from="b843812f53ee4de28bb1418492bdff68" to="8cb0218e9fe544df9bf91510decc66ea" visibility="package">
+            <owned-items />
+            <relation from="b843812f53ee4de28bb1418492bdff68" to="8cb0218e9fe544df9bf91510decc66ea" derived="false">
+              <start-role id="umlar-2b21f1ec-d783-4080-96f3-0b161e746419" name="" navigability="" association-type="aggregation" visibility="private" property-ref="0a0e42cf01644db7ab88c1fc905a1606" />
+              <end-role id="umlar-2195a0ca-80d3-4db7-b633-dba87a6aa663" name="" navigability="" association-type="association" visibility="private" property-ref="40f33b7b75f94123ba2a53dbaba13710" />
+            </relation>
+          </item>
+          <item id="47b107b471604d17b04774eeeaad7d5b" cid="REL011" type="relationship" name="является" creator="" creation-date="04/17/2024 10:16:57" from="2e8f500181a0475faf24b27db870913e" to="b3eca55ba4834bd9a454a4a5bbe7a6b3" visibility="package">
+            <owned-items />
+            <relation from="2e8f500181a0475faf24b27db870913e" to="b3eca55ba4834bd9a454a4a5bbe7a6b3" derived="false">
+              <start-role id="umlar-45fe1769-aaf0-484c-8dac-df7cf2ee3783" name="" navigability="" association-type="aggregation" visibility="private" property-ref="3200585036334a26aefffe26459631f5" />
+              <end-role id="umlar-d1bc3728-b071-4220-abf5-be608c0efe04" name="" navigability="" association-type="association" visibility="private" property-ref="01de2363870647788d80c24bb149376b" />
+            </relation>
+          </item>
+          <item id="215a126dced0495eaded61b1051da399" cid="C002" type="class" name="Тип статьи" creator="" creation-date="04/17/2024 10:02:12" visibility="undefined">
+            <stereotypes>
+              <stereotype name="entity" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="215a126dced0495eaded61b1051da399_entity_c" type="entity" ref="" />
+            </stereotype-instances>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="727b8f10fb3f416b8d2be6b78cf62dfc" cid="REL010" type="relationship" name="входит" creator="" creation-date="04/17/2024 10:12:40" from="53aaecf5e8234b76a90516cc736662c0" to="b3eca55ba4834bd9a454a4a5bbe7a6b3" visibility="package">
+            <owned-items />
+            <relation from="53aaecf5e8234b76a90516cc736662c0" to="b3eca55ba4834bd9a454a4a5bbe7a6b3" derived="false">
+              <start-role id="umlar-235f2882-7e13-4f2a-b266-a704c4e70fe1" name="" navigability="" association-type="aggregation" visibility="private" property-ref="b8403ad297cc4e21872c382931e5f168" />
+              <end-role id="umlar-dd5b1abd-e39f-4ca3-bb68-23cd09e635d6" name="" navigability="" association-type="association" visibility="private" property-ref="0b9d800f942649f1a36497f6dfe6fb2b" />
+            </relation>
+          </item>
+          <item id="2e8f500181a0475faf24b27db870913e" cid="C008" type="class" name="Сотрудник" creator="" creation-date="04/17/2024 10:16:11" visibility="undefined">
+            <stereotypes>
+              <stereotype name="entity" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="2e8f500181a0475faf24b27db870913e_entity_c" type="entity" ref="" />
+            </stereotype-instances>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="b843812f53ee4de28bb1418492bdff68" cid="C003" type="class" name="Визуальный материал" creator="" creation-date="04/17/2024 10:02:35" visibility="undefined">
+            <stereotypes>
+              <stereotype name="entity" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="b843812f53ee4de28bb1418492bdff68_entity_c" type="entity" ref="" />
+            </stereotype-instances>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="84ad2d36b50847c085751f796d52c56a" cid="REL004" type="relationship" name="характеризует" creator="" creation-date="04/17/2024 10:06:29" from="2898daa942fb4bab9e50751075edceb3" to="8cb0218e9fe544df9bf91510decc66ea" visibility="package">
+            <owned-items />
+            <relation from="2898daa942fb4bab9e50751075edceb3" to="8cb0218e9fe544df9bf91510decc66ea" derived="false">
+              <start-role id="umlar-89ffa1a1-0098-4310-997c-09cacd064d2a" name="" navigability="" association-type="aggregation" visibility="private" property-ref="988e77d757d747c28a008548401abb39" />
+              <end-role id="umlar-2c32b8db-8424-4cbe-b76e-3d2526ad2433" name="" navigability="" association-type="association" visibility="private" property-ref="1105c0a4fc394cba9b6d819a8b7d26d6" />
+            </relation>
+          </item>
+          <item id="53aaecf5e8234b76a90516cc736662c0" cid="C007" type="class" name="Авторство" creator="" creation-date="04/17/2024 10:11:45" visibility="undefined">
+            <stereotypes>
+              <stereotype name="entity" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="53aaecf5e8234b76a90516cc736662c0_entity_c" type="entity" ref="" />
+            </stereotype-instances>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+        </abstract-items>
+        <layer id="e62b1d3b57ef4a7aa8b3d5fdd07e1aec" name="Default" visible="true" enabled="true" locked="false">
+          <item id="8cb0218e9fe544df9bf91510decc66ea" iid="410eaba831fa46ffa244a71d02f076ca" show-fields="false" creation-date="04/17/2024 10:01:36" order-index="0" type="entity">
+            <layout ax="338" ay="282" awidth="140" aheight="53" x="338" y="282" width="140" height="53" rotation-center="0,53.5" />
+            <classifier />
+            <class />
+          </item>
+          <item id="215a126dced0495eaded61b1051da399" iid="548635e1805f491d858151d846da9f60" show-fields="false" creation-date="04/17/2024 10:02:12" order-index="1" type="entity">
+            <layout ax="78" ay="183.5" awidth="140" aheight="58" x="78" y="183.5" width="140" height="58" rotation-center="0,51" />
+            <classifier />
+            <class />
+          </item>
+          <item id="b843812f53ee4de28bb1418492bdff68" iid="7cf41e1b2aba4e94a2506598e01c30fd" show-fields="false" creation-date="04/17/2024 10:02:35" order-index="2" type="entity">
+            <layout ax="281" ay="32" awidth="140" aheight="71" x="281" y="32" width="140" height="71" rotation-center="0,61.5" />
+            <classifier />
+            <class />
+          </item>
+          <item id="2898daa942fb4bab9e50751075edceb3" iid="87d27eb1be3a4e0f869bf44462b452b6" show-fields="false" creation-date="04/17/2024 10:02:55" order-index="3" type="entity">
+            <layout ax="450" ay="32" awidth="140" aheight="69" x="450" y="32" width="140" height="69" rotation-center="0,61.5" />
+            <classifier />
+            <class />
+          </item>
+          <item id="40e3873eff5a48b5a085d482d4ad2dbd" iid="4e111775c2fd4d7ab8300feb85d0522a" show-fields="false" creation-date="04/17/2024 10:03:09" order-index="4" type="entity">
+            <layout ax="78" ay="368" awidth="140" aheight="73" x="78" y="368" width="140" height="73" rotation-center="0,43.5" />
+            <classifier />
+            <class />
+          </item>
+          <item id="8d097494e93643a5ba1068079ee913bf" iid="7bce74d21a5e424e942927c11cf3019b" creation-date="04/17/2024 10:04:53" order-index="5" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="27.09477,-14.99719" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="338" y1="297" x2="218" y2="212" start-border-pos="0.92924527823925" end-border-pos="0.372844827586207" start-local-pos="15" end-local-pos="28.5" name-position="-48,16">
+              <points>
+                <point x="338" y="297" />
+                <point x="218" y="212" />
+              </points>
+            </layout>
+            <relation from="8cb0218e9fe544df9bf91510decc66ea" from-iid="410eaba831fa46ffa244a71d02f076ca" to="215a126dced0495eaded61b1051da399" to-iid="548635e1805f491d858151d846da9f60" />
+          </item>
+          <item id="f19c0c8772a847b7aaab1ff64a73d140" iid="242e6ab45f284a6fa1d16cb58307ed67" creation-date="04/17/2024 10:05:23" order-index="6" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="351" y1="103" x2="378" y2="282" start-border-pos="0.625" end-border-pos="0.0714285746216774" start-local-pos="70" end-local-pos="40" name-position="-53,11">
+              <points>
+                <point x="351" y="103" />
+                <point x="378" y="282" />
+              </points>
+            </layout>
+            <relation from="b843812f53ee4de28bb1418492bdff68" from-iid="7cf41e1b2aba4e94a2506598e01c30fd" to="8cb0218e9fe544df9bf91510decc66ea" to-iid="410eaba831fa46ffa244a71d02f076ca" />
+          </item>
+          <item id="84ad2d36b50847c085751f796d52c56a" iid="2d990f8dd54f42e4b6273ef24c19c4ce" creation-date="04/17/2024 10:06:29" order-index="7" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="520" y1="101" x2="449" y2="282" start-border-pos="0.625" end-border-pos="0.198214292526245" start-local-pos="70" end-local-pos="111" name-position="54,20" name-width="126">
+              <points>
+                <point x="520" y="101" />
+                <point x="449" y="282" />
+              </points>
+            </layout>
+            <relation from="2898daa942fb4bab9e50751075edceb3" from-iid="87d27eb1be3a4e0f869bf44462b452b6" to="8cb0218e9fe544df9bf91510decc66ea" to-iid="410eaba831fa46ffa244a71d02f076ca" />
+          </item>
+          <item id="128f9aaa99534835a6a83a88d7fdfa51" iid="012eecacb28b49aa919f4aa0018bcc0a" creation-date="04/17/2024 10:07:42" order-index="8" type="relation">
+            <layout start-role-position="25,15" end-role-position="15.05308,-19.80197" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="338" y1="322" x2="218" y2="404" start-border-pos="0.811320755630732" end-border-pos="0.372641511261463" start-local-pos="40" end-local-pos="26" name-position="45,20">
+              <points>
+                <point x="338" y="322" />
+                <point x="218" y="404" />
+              </points>
+            </layout>
+            <relation from="8cb0218e9fe544df9bf91510decc66ea" from-iid="410eaba831fa46ffa244a71d02f076ca" to="40e3873eff5a48b5a085d482d4ad2dbd" to-iid="4e111775c2fd4d7ab8300feb85d0522a" />
+          </item>
+          <item id="b3eca55ba4834bd9a454a4a5bbe7a6b3" iid="e60cd6b1021e4ba78a52a7b5250b3ebb" show-fields="false" creation-date="04/17/2024 10:10:19" order-index="9" type="entity">
+            <layout ax="842" ay="281.75" awidth="140" aheight="53.5" x="842" y="281.75" width="140" height="53.5" rotation-center="0,53.25" />
+            <classifier />
+            <class />
+          </item>
+          <item id="53aaecf5e8234b76a90516cc736662c0" iid="5519b3069b034e09870267825dcd2dcd" show-fields="false" creation-date="04/17/2024 10:11:45" order-index="10" type="entity">
+            <layout ax="590" ay="281.75" awidth="140" aheight="53.5" x="590" y="281.75" width="140" height="53.5" rotation-center="0,-53.25" />
+            <classifier />
+            <class />
+          </item>
+          <item id="9f60d4d1145d4e7ca48671a16b2d46ce" iid="33717da09d1043d981a705c5f0055fb9" creation-date="04/17/2024 10:12:11" order-index="11" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="590" y1="308" x2="478" y2="308" start-border-pos="0.877336448598131" end-border-pos="0.372641509433962" start-local-pos="26" end-local-pos="26.25" name-position="-2,19">
+              <points>
+                <point x="590" y="308" />
+                <point x="478" y="308" />
+              </points>
+            </layout>
+            <relation from="53aaecf5e8234b76a90516cc736662c0" from-iid="5519b3069b034e09870267825dcd2dcd" to="8cb0218e9fe544df9bf91510decc66ea" to-iid="410eaba831fa46ffa244a71d02f076ca" />
+          </item>
+          <item id="727b8f10fb3f416b8d2be6b78cf62dfc" iid="8a681a5b3fcd43dba48c28a7b961f97e" creation-date="04/17/2024 10:12:40" order-index="12" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="26,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="730" y1="308" x2="842" y2="308" start-border-pos="0.372663551401869" end-border-pos="0.877336448598131" start-local-pos="26.25" end-local-pos="26.25" name-position="0,20">
+              <points>
+                <point x="730" y="308" />
+                <point x="842" y="308" />
+              </points>
+            </layout>
+            <relation from="53aaecf5e8234b76a90516cc736662c0" from-iid="5519b3069b034e09870267825dcd2dcd" to="b3eca55ba4834bd9a454a4a5bbe7a6b3" to-iid="e60cd6b1021e4ba78a52a7b5250b3ebb" />
+          </item>
+          <item id="2e8f500181a0475faf24b27db870913e" iid="2cdea6e995554580b0ec0d55e68f10b3" show-fields="false" creation-date="04/17/2024 10:16:11" order-index="13" type="entity">
+            <layout ax="842" ay="441" awidth="140" aheight="53" x="842" y="441" width="140" height="53" rotation-center="0,53.5" />
+            <classifier />
+            <class />
+          </item>
+          <item id="47b107b471604d17b04774eeeaad7d5b" iid="796cc1ed251a4cb0b258755493acb731" creation-date="04/17/2024 10:16:57" order-index="14" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-to-fields="false" auto-path="" x1="912" y1="441" x2="912" y2="335" start-border-pos="0.125" end-border-pos="0.625" name-position="40,-4">
+              <points>
+                <point x="912" y="441" />
+                <point x="912" y="335" />
+              </points>
+            </layout>
+            <relation from="2e8f500181a0475faf24b27db870913e" from-iid="2cdea6e995554580b0ec0d55e68f10b3" to="b3eca55ba4834bd9a454a4a5bbe7a6b3" to-iid="e60cd6b1021e4ba78a52a7b5250b3ebb" />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+</sim-project>
